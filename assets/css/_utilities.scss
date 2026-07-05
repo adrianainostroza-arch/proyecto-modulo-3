@@ -1,0 +1,15 @@
+//importando modulo propio de sass
+@use "sass:math";
+
+// Función personalizada para convertir px a rem
+@function px-to-rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+// Ejemplo de uso de la función
+.spacing-demo {
+  margin-top: px-to-rem(32); // convierte 32px a 2rem
+  padding: px-to-rem(16);    // convierte 16px a 1rem
+  background: #e5e7eb;
+  border: 1px solid #9ca3af;
+}

@@ -1,0 +1,15 @@
+// Mixin para aplicar flexbox centrado
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para aplicar un botón con colores dinámicos
+@mixin boton($bg, $color) {
+  background-color: $bg;
+  color: $color;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}

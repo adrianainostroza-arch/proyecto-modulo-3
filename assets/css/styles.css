@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Importa las variables definidas en variables.scss */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111827; /* Usa la variable de color de fondo */
+  color: #f9fafb; /* Usa la variable de color de texto */
+  line-height: 1.6;
+  padding: 1rem; /* Usa la variable de espaciado base */
+}
+
+h1 {
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+nav ul li a {
+  color: #f9fafb;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #2563eb;
+}
+
+.btn-secundario, .btn-primario {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-primario {
+  /* Hereda estilos de btn-base */
+  background-color: #2563eb;
+  color: #f9fafb;
+}
+.btn-primario:hover {
+  background-color: rgb(18.5714285714, 76.1428571429, 202.4285714286);
+}
+
+.btn-secundario {
+  /* Hereda estilos de btn-base */
+  background-color: #10b981;
+  color: #f9fafb;
+}
+.btn-secundario:hover {
+  background-color: rgb(11.9402985075, 138.0597014925, 96.2686567164);
+}
+
+.spacing-demo {
+  margin-top: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

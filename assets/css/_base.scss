@@ -1,0 +1,15 @@
+@use "variables"; /* Importa las variables definidas en variables.scss */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: variables.$color-fondo; /* Usa la variable de color de fondo */
+  color: variables.$color-texto; /* Usa la variable de color de texto */
+  line-height: 1.6;
+  padding: variables.$espaciado-base; /* Usa la variable de espaciado base */
+}
+
+h1 {
+  color: variables.$color-primario;
+  margin-bottom: variables.$espaciado-base;
+}
+

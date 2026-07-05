@@ -1,0 +1,55 @@
+@use "variables";
+@use "mixins";
+@use "sass:color";
+
+// Ejemplo de anidamiento y uso de mixin
+nav {
+  ul {
+    list-style: none;
+    margin-bottom: variables.$espaciado-base;
+
+    // llamado a un mixins
+    @include mixins.flex-center;
+    gap: variables.$espaciado-base;
+
+    li {
+      a {
+        color: variables.$color-texto;
+        text-decoration: none;
+
+        &:hover {
+          color: variables.$color-primario;
+        }
+      }
+    }
+  }
+}
+
+// Se define estilo base del boton y se puede aplicar con con herencia 
+%btn-base {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-primario {
+  @extend %btn-base; /* Hereda estilos de btn-base */
+  background-color: variables.$color-primario;
+  color: variables.$color-texto;
+
+  &:hover {
+    // Uso del módulo color para ajustar el color al pasar el mouse
+    background-color: color.adjust(variables.$color-primario, $lightness: -10%);
+  }
+}
+
+.btn-secundario {
+  @extend %btn-base; /* Hereda estilos de btn-base */
+  background-color: variables.$color-secundario;
+  color: variables.$color-texto;
+
+  &:hover {
+    background-color: color.adjust(variables.$color-secundario, $lightness: -10%);
+  }
+}
